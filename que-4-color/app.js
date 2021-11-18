@@ -1,14 +1,14 @@
 const output = document.querySelector(".output");
+let input = document.querySelector("input");
+input.addEventListener("input", (e) => {
+  output.innerHTML = e.target.value;
+});
 function change(type) {
-  let input = document.querySelector("input");
-  input = input.value;
-  let changeColor;
-
   if (type === "blue") {
-    output.innerHTML = input.fontcolor("blue");
+    output.style.color = "blue";
   } else if (type === "red") {
-    output.innerHTML = input.fontcolor("red");
+    output.style.color = "red";
   } else {
-    output.innerHTML = input.fontcolor("green");
+    output.style.color = "green";
   }
 }
