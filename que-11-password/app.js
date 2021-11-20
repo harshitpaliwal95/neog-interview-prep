@@ -2,13 +2,12 @@ let input = document.querySelector("input");
 let btn = document.getElementById("btn");
 let output = document.getElementById("output");
 
+btn.disabled = true;
+
 input.addEventListener("input", (e) => {
   input = e.target.value;
   if (input.length > 10) {
     btn.disabled = false;
-  } else if (input === " ") {
-    btn.disabled = false;
-    output.textContent = "no space";
   } else {
     btn.disabled = true;
   }
